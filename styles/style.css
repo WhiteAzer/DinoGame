@@ -1,0 +1,87 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.game {
+    width: 600px;
+    height: 200px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.game__over {
+    position: relative;
+    left: 250px;
+    top: -132px;
+    display: none;
+    width: 100px;
+    z-index: 2;
+}
+
+.db {
+    display: block;
+}
+
+.game__bottom {
+    height: 100px;
+    position: relative;
+}
+
+.game__cactus {
+    position: relative;
+    height: 60px;
+    top: 80px;
+    z-index: 1;
+    left: 110%;
+}
+
+.game__dino {
+    position: relative;
+    height: 45px;
+    left: 20px;
+    top: 80px;
+    z-index: 2;
+}
+
+.bottomMov {
+    animation: bottomMov 1.4s infinite linear;
+}
+
+.cactusMov {
+    animation: cactusMov 2s infinite linear;
+}
+
+.jump {
+    animation: jump 1s linear;
+}
+
+
+@keyframes bottomMov {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 85%;
+    }
+}
+
+@keyframes cactusMov{
+    from {
+        left: 110%;
+    }
+    to {
+        left: -10%;
+    }
+}
+
+@keyframes jump{
+    0% {
+        top: 85px;
+    }
+    35% {
+        top: 10px;
+    }
+    50% {
+        top: 0px;
+    }
+}
